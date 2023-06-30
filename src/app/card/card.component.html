@@ -1,0 +1,18 @@
+<div>
+    <h1 class="titulito">Titulo de la carta</h1>
+    <p>Adios clase</p>
+    <h3>Empresa : {{nombreEmpresa}}</h3>
+    <h3>Precio : {{precio}}</h3>
+   <div  *ngIf="precio>30">
+    <h3>La tarjeta es premium</h3>
+    <p>La razon es el precio</p>
+   </div>
+   <h1>Patrocinios de la Tarjeta</h1>
+   <p>{{patrocinios[0]}}</p>
+   <p>{{patrocinios[1]}}</p>
+   <p>{{patrocinios[2]}}</p>
+
+   <h1>Patrocinios generados por NG</h1>
+   <p *ngFor="let item of patrocinios" >{{item}}</p>
+    <button (click)="incrementarPrecio()">Incrementar Precio</button>
+</div>
